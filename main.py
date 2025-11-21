@@ -37,7 +37,7 @@ def days_to_png(filename):
     image.save(filename)
 
 def set_wallpaper():
-    script_dir = r"D:\python projects\Year's Remaining Days"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     new_filename = f"wallpaper_{int(time.time())}.png"
     abs_path = os.path.join(script_dir, new_filename)
     days_to_png(abs_path)
